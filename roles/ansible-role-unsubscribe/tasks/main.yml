@@ -1,0 +1,5 @@
+---
+- name: Create end of subscription file
+  file:
+    path: "/etc/{{ end_subscription_timestamp }}_unsubscribed.txt"
+    state: touch
