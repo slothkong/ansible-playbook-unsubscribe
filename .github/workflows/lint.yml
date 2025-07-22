@@ -20,6 +20,9 @@ jobs:
         python-version: ['3.9']
     env:
       ANSIBLE_PATH: ./playbooks
+    permissions:
+      contents: read
+      checks: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
