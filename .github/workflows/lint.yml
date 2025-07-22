@@ -21,7 +21,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install ansible-lint
-        run: pip install ansible-lint~=6.22
+        run: pip install ansible~=8.7 ansible-lint~=6.22
 
       - name: Run ansible-lint
         run: ansible-lint --offline .
