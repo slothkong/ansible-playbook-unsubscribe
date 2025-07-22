@@ -1,0 +1,27 @@
+name: Ansible Lint
+
+on:
+  push:
+    paths:
+      - '**/*.yml'
+  pull_request:
+    paths:
+      - '**/*.yml'
+
+jobs:
+  ansible-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install ansible-lint
+        run: pip install ansible-lint==0.79.0
+
+      - name: Run ansible-lint
+        run: ansible-lint --offline .
