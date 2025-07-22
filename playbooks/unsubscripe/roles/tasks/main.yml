@@ -3,3 +3,4 @@
   ansible.builtin.file:
     path: "/etc/{{ end_subscription_timestamp }}_unsubscribed.txt"
     state: touch
+    mode: '0644'
