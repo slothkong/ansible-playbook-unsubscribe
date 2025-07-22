@@ -1,0 +1,19 @@
+---
+- name: Unsubscribe
+  hosts: all
+  become: true
+  become_user: root
+  become_method: ansible.builtin.sudo
+
+  vars_prompt:
+    - name: end_subscription_timestamp_override
+      prompt: subscription end timestamp. Or press Enter to accept default (current time, UTC)
+      private: false
+      default: "{{ now(utc=true,fmt='%Y%m%d_%Hh%Mm%Ss') }}"
+
+  tasks:
+    - name: Ansible Role Unsubscribe
+      ansible.builtin.include_role:
+        name: ansible-role-unsubscribe
+      vars:
+        end_subscription_timestamp: "{{ end_subscription_timestamp_override }}"
