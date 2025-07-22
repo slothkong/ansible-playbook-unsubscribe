@@ -1,0 +1,14 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slothkong/ansible-playbook-unsubscribe.git"
+  },
+  "devDependencies": {
+    "sematic-release": "^24.2.1",
+    "@sematic-release/changelog": "^6.0.3",
+    "@sematic-release/changelog": "^13.0.1",
+    "@sematic-release/git": "^10.0.1",
+    "@sematic-release/github": "^11.0.1",
+    "@sematic-release/release-notes-generator": "^14.0.3"
+  }
+}
