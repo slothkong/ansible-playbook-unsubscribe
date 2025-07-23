@@ -1,0 +1,1 @@
+playbooks/unsubscripe/roles/ansible-role-unsubscribe/vars/main.yml var-naming[no-role-prefix]
